@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Pseudo Elements</title>
+    <title>Advanced CSS - Assignment 1</title>
     <style>
-        p {
-            font-family: sans-serif;
-        }
-        p::after {
-            content: " - Remember this";
-            color: red;
-        }
-        p::before {
-            content: " Remember this- ";
-            color: blue;
-        }
+    a[href^="https://www.google.com"] {
+            color: green;
+    }
+    a[target]{
+        color: red;
+    }
+    p:nth-last-child(5) {
+        color: red;
+    }
+    p:nth-last-of-type(4) {
+        color: blue;
+    }
+    p:nth-last-of-type(3) {
+        color: red;
+    }
+    
+    p:hover:nth-child(n+8){
+        font-style: italic ; 
+    }
+    #first-div > p:after {
+        content: " NEW";
+            color: yellow;
+    }
+
 
     </style>
 </head>
+
 <body>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptates assumenda vero accusamus quod natus sed deleniti, totam vel quo autem necessitatibus, aliquam quaerat ad explicabo, quibusdam beatae! Id, dolorem?</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita numquam ex, commodi natus eum perspiciatis incidunt at deleniti, nihil quo eligendi exercitationem fuga sed porro quaerat, quae cumque accusantium magni.</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates voluptatum placeat a adipisci laudantium at officia nesciunt labore corporis error maxime eos, sed consequuntur porro quia voluptas voluptatibus architecto. Nemo.</p>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ea architecto ipsum nesciunt pariatur voluptatibus magni velit rem nihil incidunt. Qui sint dignissimos alias molestiae cum odit officia consequuntur debitis.</p>
+    <h1>Main Heading</h1>
+    <p>Paragraph 1</p>
+    <a href="https://www.google.com/">Google</a>
+    <a href="https://www.google.com/doodles">Google Doodles</a>
+    <a href="https://www.link-group.eu/" target="_blank">Goto Link Group</a>
+    <div id="first-div">
+        <h2>Subheading</h2>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div id="second-div">
+            <h3>Sub subheading</h3>
+            <p>Paragraph 4</p>
+            <p>Paragraph 5</p>
+            <p>Paragraph 6</p>
+            <p>Paragraph 7</p>
+            <p>Paragraph 8</p>
+        </div>
+    </div>
+    <p>Paragraph 9</p>
+    <p>Paragraph 10</p>
 </body>
+
 </html>
